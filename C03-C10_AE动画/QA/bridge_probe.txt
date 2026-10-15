@@ -1,0 +1,16 @@
+comp C03 1920 1080
+99_SOURCE_REFERENCE__隐藏参考 3d=false collapse=false enabled=false expr=
+98_FULL_SCRIPT_TEXT__隐藏参考 3d=false collapse=false enabled=false expr=
+90_CAPTION 3d=false collapse=false enabled=true expr=
+26_SEND_BUTTON 3d=false collapse=false enabled=true expr=
+25_INPUT_BOX 3d=false collapse=false enabled=true expr=
+21_QUICK_ACTIONS 3d=false collapse=false enabled=true expr=
+20_AI_WELCOME 3d=false collapse=false enabled=true expr=
+12_OVERVIEW_CARDS 3d=false collapse=false enabled=true expr=
+11_STATION_HEADER 3d=false collapse=false enabled=true expr=
+10_UI_PANEL 3d=false collapse=false enabled=true expr=
+02_HEADLINE 3d=false collapse=false enabled=true expr=
+01_BRAND 3d=false collapse=false enabled=true expr=
+00_BG 3d=false collapse=false enabled=true expr=
+C04 layers=15
+BACKUP OK

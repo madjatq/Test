@@ -1,0 +1,17 @@
+C09_接入资源修正目标 | 1920x1080 | RGB | Embedded assets
+99_SOURCE_REFERENCE__隐藏参考 | visible=false | items=1
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+40_CONVERGENCE | visible=true | items=7
+31_POWER_THUMB | visible=true | items=4
+30_RESEARCH_THUMB | visible=true | items=4
+22_RESOURCE_LABEL | visible=true | items=8
+21_RESOURCE_MAP | visible=true | items=1
+20_MAP_BASE | visible=true | items=3
+10_MAIN_PANEL | visible=true | items=2
+06_TOKEN_A03 | visible=true | items=2
+05_TOKEN_A02 | visible=true | items=2
+04_TOKEN_A01 | visible=true | items=2
+02_HEADLINE | visible=true | items=3
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

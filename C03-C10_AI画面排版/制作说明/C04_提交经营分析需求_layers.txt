@@ -1,0 +1,16 @@
+C04_提交经营分析需求 | 1920x1080 | RGB | Embedded assets
+99_SOURCE_REFERENCE__隐藏参考 | visible=false | items=1
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+28_POINTER_SEND | visible=true | items=1
+27_INPUT_CURSOR | visible=true | items=1
+26_SEND_BUTTON | visible=true | items=4
+25_INPUT_BOX | visible=true | items=3
+21_AI_ACK | visible=true | items=3
+20_USER_MESSAGE | visible=true | items=3
+12_OVERVIEW_CARDS | visible=true | items=9
+11_STATION_HEADER | visible=true | items=2
+10_UI_PANEL | visible=true | items=26
+02_HEADLINE | visible=true | items=3
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

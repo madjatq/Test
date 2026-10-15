@@ -1,0 +1,135 @@
+﻿[
+    {
+        "name":  "_pydeps",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\_pydeps",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\_pydeps",
+        "files":  4808,
+        "bytes":  244634626
+    },
+    {
+        "name":  "_reference_process",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\_reference_process",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\_reference_process",
+        "files":  5,
+        "bytes":  41832829
+    },
+    {
+        "name":  "analyze_reference.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\analyze_reference.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\analyze_reference.py",
+        "files":  1,
+        "bytes":  3507
+    },
+    {
+        "name":  "compose_original.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\compose_original.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\compose_original.py",
+        "files":  1,
+        "bytes":  10768
+    },
+    {
+        "name":  "finalize_music.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\finalize_music.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\finalize_music.py",
+        "files":  1,
+        "bytes":  3447
+    },
+    {
+        "name":  "ORIGINAL_LightTech_116BPM_33bars_premaster.wav",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\ORIGINAL_LightTech_116BPM_33bars_premaster.wav",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\ORIGINAL_LightTech_116BPM_33bars_premaster.wav",
+        "files":  1,
+        "bytes":  19663490
+    },
+    {
+        "name":  "prepare_reference_edit.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\prepare_reference_edit.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\prepare_reference_edit.py",
+        "files":  1,
+        "bytes":  1635
+    },
+    {
+        "name":  "reference_analysis.wav",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_analysis.wav",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_analysis.wav",
+        "files":  1,
+        "bytes":  17263758
+    },
+    {
+        "name":  "reference_grid_analysis.json",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_grid_analysis.json",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_grid_analysis.json",
+        "files":  1,
+        "bytes":  58308
+    },
+    {
+        "name":  "reference_onsets.npz",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_onsets.npz",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_onsets.npz",
+        "files":  1,
+        "bytes":  981474
+    },
+    {
+        "name":  "reference_signal_analysis.json",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_signal_analysis.json",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_signal_analysis.json",
+        "files":  1,
+        "bytes":  7774
+    },
+    {
+        "name":  "reference_speech_probabilities.npy",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_speech_probabilities.npy",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_speech_probabilities.npy",
+        "files":  1,
+        "bytes":  49056
+    },
+    {
+        "name":  "reference_tail_tempo.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_tail_tempo.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_tail_tempo.py",
+        "files":  1,
+        "bytes":  1415
+    },
+    {
+        "name":  "reference_tempo_refined.json",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\reference_tempo_refined.json",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\reference_tempo_refined.json",
+        "files":  1,
+        "bytes":  247
+    },
+    {
+        "name":  "refine_grid.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\refine_grid.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\refine_grid.py",
+        "files":  1,
+        "bytes":  997
+    },
+    {
+        "name":  "refine_tempo.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\refine_tempo.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\refine_tempo.py",
+        "files":  1,
+        "bytes":  1246
+    },
+    {
+        "name":  "silero_vad.onnx",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\silero_vad.onnx",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\silero_vad.onnx",
+        "files":  1,
+        "bytes":  2327524
+    },
+    {
+        "name":  "verify_audio_delivery.py",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\verify_audio_delivery.py",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\verify_audio_delivery.py",
+        "files":  1,
+        "bytes":  1716
+    },
+    {
+        "name":  "音乐与拍点分析.md",
+        "source":  "D:\\AI\\作业\\1014\\MCP操作\\C03-C10_AE动画\\Audio\\音乐与拍点分析.md",
+        "destination":  "D:\\AI\\作业\\1014\\MCP操作\\_制作过程\\AE音频制作\\音乐与拍点分析.md",
+        "files":  1,
+        "bytes":  2482
+    }
+]

@@ -1,0 +1,9 @@
+project=D:\AI\作业\1014\MCP操作\C03-C10_AE动画\C03-C10_MG动画.aep;items=136
+2 C03 layers=13 duration=6.8 transformKeys=0
+3 C04 layers=15 duration=8.86666666666667 transformKeys=0
+4 C05 layers=13 duration=8.9 transformKeys=0
+5 C06 layers=11 duration=15.0666666666667 transformKeys=0
+6 C07 layers=14 duration=6.8 transformKeys=0
+7 C08 layers=18 duration=8.9 transformKeys=0
+8 C09 layers=16 duration=6.8 transformKeys=0
+9 C10 layers=18 duration=10.9666666666667 transformKeys=0

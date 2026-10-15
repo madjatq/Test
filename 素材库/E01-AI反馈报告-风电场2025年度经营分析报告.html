@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>示范场站（100MW）2025年度经营分析报告</title>
+<style>
+  :root{
+    --navy:#00366F; --navy-light:#1a5aa0; --blue-bar:#4a72c4; --teal:#1aa899;
+    --green:#3d8b3d; --orange:#d9700f; --red:#c8102e;
+    --bg:#f5f7fa; --card:#ffffff; --line:#dde4ee; --text:#1c2733; --muted:#66788c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;padding:28px 20px 60px;}
+  .wrap{max-width:1180px;margin:0 auto;}
+  h1{font-size:24px;color:var(--navy);border-left:6px solid var(--navy);padding-left:12px;margin-bottom:6px;}
+  .sub{color:var(--muted);font-size:12px;margin:6px 0 10px 0;line-height:1.7;}
+  .sec-title{font-size:18px;font-weight:700;color:var(--text);margin:30px 0 14px;padding-left:10px;border-left:4px solid var(--blue-bar);}
+
+  /* 总述 KPI */
+  .profile{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 22px;}
+  .p-card{background:var(--navy);color:#fff;border-radius:6px;padding:16px 18px;text-align:center;}
+  .p-card .p-val{font-size:24px;font-weight:800;line-height:1.25;margin-bottom:4px;}
+  .p-card .p-lab{font-size:12px;color:#b8c9dd;}
+  .p-card.light{background:#fff;border:1px solid var(--line);color:var(--text);}
+  .p-card.light .p-val{color:var(--navy);font-size:20px;}
+  .p-card.light .p-lab{color:var(--muted);}
+
+  .period-note{font-size:13px;color:var(--navy);background:#eef3fb;border-left:4px solid var(--navy);padding:8px 14px;margin-bottom:16px;border-radius:0 4px 4px 0;}
+
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+  .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--navy);padding:16px 18px;border-radius:4px;}
+  .card.green{border-top-color:var(--green);}
+  .card.orange{border-top-color:var(--orange);}
+  .card.red{border-top-color:var(--red);}
+  .card.teal{border-top-color:var(--teal);}
+  .card .lab{font-size:13px;color:var(--muted);margin-bottom:8px;}
+  .card .val{font-size:30px;font-weight:800;color:var(--navy);line-height:1.1;}
+  .card.green .val{color:var(--green);}
+  .card.orange .val{color:var(--orange);}
+  .card.red .val{color:var(--red);}
+  .card.teal .val{color:var(--teal);}
+  .card .unit{font-size:14px;font-weight:600;color:var(--text);}
+  .card .note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;}
+  .card .note b{color:var(--orange);}
+  .duo{display:flex;gap:24px;}
+  .duo>div{flex:1;}
+  table{width:100%;border-collapse:collapse;background:var(--card);font-size:13px;border:1px solid var(--line);}
+  th{background:var(--blue-bar);color:#fff;font-weight:600;padding:9px 8px;text-align:center;}
+  td{padding:8px;border-bottom:1px solid var(--line);text-align:center;}
+  td.l{text-align:left;padding-left:14px;}
+  tr.ours td{background:#eef3fb;font-weight:700;}
+  tr.ours td.l{color:var(--navy);}
+  tr.total td{background:#f0f4fa;font-weight:700;color:var(--navy);}
+  tr.hot td{background:#fdf0f0;}
+  td.hot{color:var(--red);font-weight:700;}
+  td.good{color:var(--green);font-weight:700;}
+  td.up{color:var(--red);}
+  td.dn{color:var(--green);}
+  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#eee;color:#555;margin-left:6px;}
+  .tag.bad{background:#fdecea;color:var(--red);}
+  .tag.good{background:#e8f4e8;color:var(--green);}
+  .callout{background:#fff8ee;border:1px solid #f0d9b5;border-radius:4px;padding:10px 14px;font-size:13px;color:#7a5a1e;margin:14px 0;line-height:1.8;}
+  .callout.blue{background:#eef3fb;border-color:#b9cce8;color:#25476b;}
+  .foot{margin-top:34px;font-size:12px;color:var(--muted);line-height:1.9;border-top:1px solid var(--line);padding-top:14px;}
+  .foot b{color:var(--text);}
+  .chart{width:100%;height:260px;display:block;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px;}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-2px;}
+  .bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:13px;}
+  .bar-row .bl{width:130px;text-align:right;color:var(--text);flex:none;}
+  .bar-row .bt{flex:1;background:#eef1f6;border-radius:3px;height:18px;position:relative;overflow:hidden;}
+  .bar-row .bf{height:100%;border-radius:3px;}
+  .bar-row .bv{width:90px;flex:none;font-weight:700;color:var(--text);}
+
+  /* 分析结论四段式 */
+  .verdict{background:var(--navy);color:#fff;border-radius:6px;padding:14px 18px;font-size:14px;line-height:1.85;margin-bottom:16px;}
+  .an-sec{margin-bottom:16px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:14px 18px;}
+  .an-h{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;padding-left:9px;border-left:3px solid var(--teal);}
+  .an-list{margin:0;padding-left:22px;font-size:13px;line-height:1.95;color:var(--text);}
+  .an-list li{margin-bottom:5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>示范场站（100MW 风电）· 2025年度经营分析报告</h1>
+
+  <!-- ===== 顶部总述（2025单年） ===== -->
+  <div class="profile" style="grid-template-columns:repeat(3,1fr);">
+    <div class="p-card light">
+      <div class="p-val">12,907 万kWh</div>
+      <div class="p-lab">2025年实际发电量</div>
+    </div>
+    <div class="p-card light">
+      <div class="p-val">4,573.5 万元</div>
+      <div class="p-lab">2025年电费收入</div>
+    </div>
+    <div class="p-card light">
+      <div class="p-val">71.4%</div>
+      <div class="p-lab">2025年计划完成率</div>
+    </div>
+  </div>
+
+  <!-- ===== 第一排：电量主线（2025） ===== -->
+  <div class="grid3">
+    <div class="card">
+      <div class="lab">计划电量（2025年）</div>
+      <div class="val">18,074<span class="unit">万kWh</span></div>
+      <div class="note">较2024年（18,338）-264 万kWh</div>
+    </div>
+    <div class="card">
+      <div class="lab">实际发电量（2025年）</div>
+      <div class="val">12,907<span class="unit">万kWh</span></div>
+      <div class="note">同比 2024年（13,321）<b>-414 万kWh（-3.1%）</b></div>
+    </div>
+    <div class="card orange">
+      <div class="lab">计划完成率（2025年）</div>
+      <div class="val">71.4%<span class="unit"></span></div>
+      <div class="note">2024年 72.6%，同比 -1.2 pp</div>
+    </div>
+  </div>
+
+  <!-- ===== 第二排：资源与限电（2025） ===== -->
+  <div class="grid2">
+    <div class="card green"><div class="duo">
+      <div>
+        <div class="lab">平均风速（2025年）</div>
+        <div class="val" style="font-size:24px;">5.35<span class="unit"> m/s</span></div>
+        <div class="note">月均区间 4.7 ~ 6.1 m/s ｜ 2024年 5.28</div>
+      </div>
+      <div>
+        <div class="lab">利用小时（2025年）</div>
+        <div class="val" style="font-size:24px;">1,291<span class="unit"> h</span></div>
+        <div class="note">还原限电后 1,499h ｜ 2024年 1,333h</div>
+      </div>
+    </div></div>
+    <div class="card orange"><div class="duo">
+      <div>
+        <div class="lab">限电率（2025年 · 加权）</div>
+        <div class="val" style="font-size:24px;">13.9%<span class="unit"></span></div>
+        <div class="note">同比 2024年（8.5%）<b>+5.4 pp</b>，峰值 2025年12月 <b>21.0%</b></div>
+      </div>
+      <div>
+        <div class="lab">限电量（2025年）</div>
+        <div class="val" style="font-size:24px;">2,081.4<span class="unit"> 万kWh</span></div>
+        <div class="note">同比 2024年（1,242.6）<b>+838.8（+67.5%）</b></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ===== 第三排：设备与损失结构（2025 · 五列） ===== -->
+  <div class="grid5">
+    <div class="card green">
+      <div class="lab">设备可用率</div>
+      <div class="val" style="font-size:24px;">98.7%<span class="unit"></span></div>
+      <div class="note">长停 599h / 损失 1,798万kWh 已计入</div>
+    </div>
+    <div class="card red">
+      <div class="lab">故障损失（2025年）</div>
+      <div class="val" style="font-size:24px;">1,242.0<span class="unit">万kWh</span></div>
+      <div class="note">变电 391.0 ｜ 发电 851.0 ｜ 同比 <b>+45.0%</b></div>
+    </div>
+    <div class="card orange">
+      <div class="lab">计划损失（2025年）</div>
+      <div class="val" style="font-size:24px;">106.6<span class="unit">万kWh</span></div>
+      <div class="note">占损失合计 7.0% ｜ 同比 -1.8%</div>
+    </div>
+    <div class="card green">
+      <div class="lab">不可抗力（2025年）</div>
+      <div class="val" style="font-size:24px;">179.1<span class="unit">万kWh</span></div>
+      <div class="note">占损失合计 11.7% ｜ 同比 +63.3%</div>
+    </div>
+    <div class="card red">
+      <div class="lab">损失合计（2025年）</div>
+      <div class="val" style="font-size:24px;">1,527.7<span class="unit">万kWh</span></div>
+      <div class="note">占计划电量 8.5% ｜ 同比 <b>+43.6%</b></div>
+    </div>
+  </div>
+
+  <!-- ===== 双细则考核（2025） ===== -->
+  <div class="sec-title">双细则考核情况（2025年 · 12个月）</div>
+  <div class="grid4">
+    <div class="card red">
+      <div class="lab">考核总额（2025年）</div>
+      <div class="val">56.6<span class="unit">万元</span></div>
+      <div class="note">月均 4.7 万元 ｜ 2024年 57.1 万元</div>
+    </div>
+    <div class="card green">
+      <div class="lab">奖励合计（主表口径）</div>
+      <div class="val">7.8<span class="unit">万元</span></div>
+      <div class="note">返还 2.9 ｜ 分摊 -4.8</div>
+    </div>
+    <div class="card orange">
+      <div class="lab">净影响（主表口径）</div>
+      <div class="val">52.3<span class="unit">万元</span></div>
+      <div class="note">2024年 62.8 万元，同比 -16.7%</div>
+    </div>
+    <div class="card red">
+      <div class="lab">最高单月考核</div>
+      <div class="val">9.9<span class="unit">万元</span></div>
+      <div class="note">2025年12月 ｜ 超8万红线共 <b>4</b> 个月，零考核 4 个月</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="lab">考核原因结构（2025年累计，万元）</div>
+      <div style="margin-top:12px;">
+        <div class="bar-row"><div class="bl">有功控制响应延迟</div><div class="bt"><div class="bf" style="width:100.0%;background:#c8102e"></div></div><div class="bv">14.6</div></div>
+        <div class="bar-row"><div class="bl">AGC响应不合格</div><div class="bt"><div class="bf" style="width:75.6%;background:#d9700f"></div></div><div class="bv">11.1</div></div>
+        <div class="bar-row"><div class="bl">一次调频未动作</div><div class="bt"><div class="bf" style="width:74.3%;background:#d9700f"></div></div><div class="bv">10.9</div></div>
+        <div class="bar-row"><div class="bl">AVC响应不合格</div><div class="bt"><div class="bf" style="width:66.4%;background:#4a72c4"></div></div><div class="bv">9.7</div></div>
+        <div class="bar-row"><div class="bl">超短期功率预测偏差</div><div class="bt"><div class="bf" style="width:35.9%;background:#4a72c4"></div></div><div class="bv">5.2</div></div>
+        <div class="bar-row"><div class="bl">短期功率预测偏差</div><div class="bt"><div class="bf" style="width:35.0%;background:#1aa899"></div></div><div class="bv">5.1</div></div>
+      </div>
+      <div class="note" style="margin-top:10px;">调节类（有功控制+AGC+AVC+一次调频）合计 <b>46.2 万元</b>，占 81.7%，为第一大失血来源；预测类合计 10.4 万元占 18.3%</div>
+    </div>
+    <div class="card">
+      <div class="lab">2025年月度考核走势（万元，红线 = 8 万预警线）</div>
+      <svg class="chart" viewBox="0 0 560 260" preserveAspectRatio="none">
+        <line x1="30" y1="230" x2="550" y2="230" stroke="#dde4ee" stroke-width="1"/>
+        <line x1="30" y1="178" x2="550" y2="178" stroke="#dde4ee" stroke-width="1"/>
+        <line x1="30" y1="126" x2="550" y2="126" stroke="#dde4ee" stroke-width="1"/>
+        <line x1="30" y1="74"  x2="550" y2="74"  stroke="#dde4ee" stroke-width="1"/>
+        <line x1="30" y1="22"  x2="550" y2="22"  stroke="#dde4ee" stroke-width="1"/>
+        <text x="26" y="234" font-size="10" fill="#66788c" text-anchor="end">0</text>
+        <text x="26" y="182" font-size="10" fill="#66788c" text-anchor="end">3</text>
+        <text x="26" y="130" font-size="10" fill="#66788c" text-anchor="end">6</text>
+        <text x="26" y="78"  font-size="10" fill="#66788c" text-anchor="end">9</text>
+        <text x="26" y="26"  font-size="10" fill="#66788c" text-anchor="end">12</text>
+        <line x1="30" y1="91.3" x2="550" y2="91.3" stroke="#c8102e" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <text x="550" y="86" font-size="10" fill="#c8102e" text-anchor="end">预警线 8万</text>
+        <g>
+          <rect x="48" y="229.0" width="22" height="1.0" fill="#3d8b3d"/>
+          <text x="59.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">1月</text>
+          <rect x="88" y="174.5" width="22" height="55.5" fill="#4a72c4"/>
+          <text x="99.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">2月</text>
+          <rect x="128" y="96.5" width="22" height="133.5" fill="#d9700f"/>
+          <text x="139.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">3月</text>
+          <rect x="168" y="229.0" width="22" height="1.0" fill="#3d8b3d"/>
+          <text x="179.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">4月</text>
+          <rect x="208" y="229.0" width="22" height="1.0" fill="#3d8b3d"/>
+          <text x="219.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">5月</text>
+          <rect x="248" y="72.3" width="22" height="157.7" fill="#c8102e"/>
+          <text x="259.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">6月</text>
+          <text x="259.0" y="68.3" font-size="9" fill="#c8102e" text-anchor="middle" font-weight="700">9.1</text>
+          <rect x="288" y="165.9" width="22" height="64.1" fill="#4a72c4"/>
+          <text x="299.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">7月</text>
+          <rect x="328" y="162.4" width="22" height="67.6" fill="#4a72c4"/>
+          <text x="339.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">8月</text>
+          <rect x="368" y="65.3" width="22" height="164.7" fill="#c8102e"/>
+          <text x="379.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">9月</text>
+          <text x="379.0" y="61.3" font-size="9" fill="#c8102e" text-anchor="middle" font-weight="700">9.5</text>
+          <rect x="408" y="229.0" width="22" height="1.0" fill="#3d8b3d"/>
+          <text x="419.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">10月</text>
+          <rect x="448" y="63.6" width="22" height="166.4" fill="#c8102e"/>
+          <text x="459.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">11月</text>
+          <text x="459.0" y="59.6" font-size="9" fill="#c8102e" text-anchor="middle" font-weight="700">9.6</text>
+          <rect x="488" y="58.4" width="22" height="171.6" fill="#c8102e"/>
+          <text x="499.0" y="246" font-size="9" fill="#66788c" text-anchor="middle">12月</text>
+          <text x="499.0" y="54.4" font-size="9" fill="#c8102e" text-anchor="middle" font-weight="700">9.9</text>
+        </g>
+      </svg>
+      <div class="legend">
+        <span><i style="background:#3d8b3d"></i>无考核（4个月）</span>
+        <span><i style="background:#4a72c4"></i>≤6万（3个月）</span>
+        <span><i style="background:#d9700f"></i>6–9万（1个月）</span>
+        <span><i style="background:#c8102e"></i>&gt;9万（4个月）</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 分析结论与建议 ===== -->
+  <div class="sec-title">分析结论与建议（2025年度）</div>
+
+  <div class="verdict">电站 2025 年经营处于「资源不差、限电加重、故障扩大、考核平稳」的状态：全年实际发电 12,907 万kWh，完成计划的 71.4%，同比微降 1.2 个百分点，而月均风速还回升 0.07 m/s，电量下滑不是资源问题。经营矛盾有两个：一是限电率从 8.5% 升至 13.9%（限电量 +67.5%），断面 7 站中列第 3 高，已成第一大电量流失项；二是故障损失 +45.0%（变电故障接近翻倍），叠加长停 599h/1,798 万kWh，设备侧损失结构性扩大。另外，双细则考核 56.6 万元与上年基本持平，但原因结构从预测类切换为调节类主导（占 81.7%），治理方向需要跟着变。建议经营重点放在限电对标复盘、变电设备可靠性与 AGC/AVC 调节品质三件事上。</div>
+
+  <div class="an-sec">
+    <div class="an-h">关键发现</div>
+    <ul class="an-list">
+      <li>电量同比下滑的主导变量是限电，不是资源：2025年发电量 12,907 万kWh，同比 -414 万kWh（-3.1%）；同期月均风速 5.28→5.35 m/s 不降反升，而限电量 1,242.6→2,081.4 万kWh（+67.5%）、限电率 8.5%→13.9%。还原限电后利用小时 1,499h，若限电率回到 2024年水平，全年可多发电量约 840 万kWh、电费收入约 298 万元。</li>
+      <li>限电加重是断面共性问题，但本电站排名偏后：2025年断面 7 站中 5 站限电率上升（B +2.1pp、C +3.0pp、本电站 +2.7pp、D +0.6pp、F +8.9pp），仅 E 场站下降 2.7pp；本电站 11.8% 列第3高，高于断面均值 0.6pp。E 场站在同断面条件下做到 8.5%，其调度沟通与检修窗口安排值得对标复盘。</li>
+      <li>故障损失结构性扩大，变电侧是重灾区：故障损失 850.9→1,242.0 万kWh（+45.0%），其中变电故障 198.8→391.0 万kWh（+96.7%）接近翻倍；长停时长 599h、长停损失 1,798 万kWh。但故障停机时长反而从 492h 降到 399h（-18.9%），说明常规故障处理提速，损失扩大来自大部件/长停类事件，备件与预防性维护策略需要升级。</li>
+      <li>不可抗力损失 +63.3%：109.7→179.1 万kWh，2025年7–8月单月分别达 34.9、39.7 万kWh，与夏季极端天气过程重合，属厂外因素，具备保险索赔/合同免责的证据基础。</li>
+      <li>双细则考核总量平稳、结构切换：考核 57.1→56.6 万元（-0.9%），净影响 62.8→52.3 万元（-16.7%）；但原因结构从 2024年预测类主导切换为 2025年调节类主导——有功控制响应延迟 14.6 + AGC 11.1 + 一次调频 10.9 + AVC 9.7 合计 46.2 万元、占 81.7%，预测类仅 10.4 万元占 18.3%。4 个月超 8 万红线（6、9、11、12月），且集中在下半年，走势在恶化。</li>
+      <li>计划完成率连续两年低于 75%：2024年 72.6%、2025年 71.4%，两年累计缺口约 9,500 万kWh。计划下达值与实际资源/限电条件长期脱节，年终考核口径失真，建议复核 2026年计划曲线编制依据。</li>
+    </ul>
+  </div>
+
+  <div class="an-sec">
+    <div class="an-h">后续工作建议（可落实进2026年经营管理工作计划中）</div>
+    <ul class="an-list">
+      <li><b>限电专项复盘与交易对冲（最高优先级）</b>：调取 2025 年 2、8、11、12 月限电指令记录，逐月核对断面约束时刻表与本电站出力曲线，对标同断面 E 场站（8.5%）形成差异清单。落地措施对接年度计划三项：①调度关系维护——通过电网公关提前掌握检修与市场交易变化、优化交易上报（1–8 月，2025 年此项已增发 487.42 万kWh）；②省间交易对冲——提前掌握系统性增容工程投运计划及汛期消纳策略，用省间低价电量对冲限电（2–4 月，预计减损 100 万kWh）；③配合涉网合规性检测与电力交易工作（7–11 月），年末与业主、调度沟通争取限电补偿（12 月）。目标：2026 年限电率从 13.9% 压回 10% 以内，对应挽回电量约 580 万kWh。</li>
+      <li><b>变电设备可靠性专项（贯穿全年，大风季前完成主体）</b>：对 391.0 万kWh 变电故障损失逐笔归因（主变、开关柜、集电线路、SVG），核对长停 599h 事件的备件到货周期。落地措施对接年度计划：①集电线路与升压站专项治理——覆冰监测、红外测温、绝缘子清扫（2–6 月）；②针对集电线路跳闸重点排查高压电缆接头，结合电气预防性试验精确发现隐患、无风天气消缺（5–9 月，目标变电故障损失 67→17 万kWh）；③预试年计划压缩至 72 小时内完成升压站预试、集电线路分批利用无风天气开展（7 月，计划损失 30→20 万kWh）；④箱变高压套管接线挂锡处理（7–8 月，该缺陷单次损失 27 万kWh）；⑤集电线路隐患树木砍伐（11–12 月，避免多次跳闸约 150 万kWh / 52.5 万元损失）；⑥主变套管加装雨防檐、塔基环网柜加装防水板（12 月）；⑦每月箱变及集电线路预防性巡视 + 每季度无人机专项巡检、隐患分级闭环（11–12 月起常态化）。目标：变电故障损失 391→250 万kWh 以内。</li>
+      <li><b>双细则调节类治理（8 万红线月度管控）</b>：针对有功控制响应延迟（14.6 万元）与 AGC/AVC 响应不合格（20.8 万元），调取 6、9、11、12 月调节指令与响应曲线。落地措施对接年度计划：①每日统计 AGC/AVC 调节速率与调节精度、保证月平均合格率（7 月起全年）；②有功功率变化考核治理——升级风机监控系统加装 1 分钟/10 分钟有功变化上下限策略、规范计划检修甩负荷操作、跳闸后第一时间提紧急检修票并同步双细则管理部门（9–12 月）；③一次调频专项试验——按 NB/T 31197-2025 外委电科院完成试验并提交报告（10–12 月，完成后免除全年上网电量 1% 约 37.2 万元考核）；④涉网设备标准化巡检（7–10 月）、SVG 功率单元模块保持 2 块现场储备（高温期故障多发）；⑤功率预测侧——每 2 小时巡视预测系统、每日统计偏差并督促厂家修模（6–12 月）；⑥调研同区域其他场站双细则考核与设备厂家情况，必要时向业主建议技改（12 月）。目标：单月考核回到 6 万元以内，全年净影响压到 45 万元以下。</li>
+      <li><b>不可抗力损失追偿与证据链建设</b>：2025 年 7–8 月极端天气损失 74.6 万kWh、全年不可抗力 179.1 万kWh，梳理气象证明、EAM 停机记录、损失电量计算三项证据链，按运维合同免责条款与财产保险流程提交索赔；同步完成环境事件突发应急预案备案（12 月，合同约定），确保后续极端天气事件的处置记录可追溯、可举证。</li>
+      <li><b>2026 年计划口径校准与考核激励挂钩</b>：以两年还原限电后利用小时（1,457h / 1,499h）为基准，叠加断面限电预期与检修计划重编 2026 年月度计划曲线，目标完成率口径拉回 85% 以上；执行季度上网电量完成率考核激励（当季度完成率 100%、每高于 1% 奖励季度付款的 1%，5–8 月），把计划严肃性传导到值班层；计划性工作一律安排在 2–3 m/s 小风天或调度限电时段，避免计划停机吃掉大风季电量。</li>
+      <li><b>数据口径统一与报送质量</b>：明确双细则考核唯一取数来源（建议以考核明细表为准），主表「考核」列注明勾稽关系；限电率统一加权口径并注明取数时间。特别提示：合同约定因运维人员信息报送错误或不及时、问题处理不当造成的双细则考核由乙方承担 100%（10–11 月专项检查），需把 OMS/调度报送纳入值班交接班检查项，杜绝报送类考核。</li>
+    </ul>
+  </div>
+
+  <div class="an-sec">
+    <div class="an-h">风险提示</div>
+    <ul class="an-list">
+      <li>限电继续走高的风险：断面约束收紧趋势已延续一年（本电站 +2.7pp、F 站 +8.9pp），若 2026年维持 13.9% 限电率，全年将损失电量约 2,100 万kWh、电费收入约 740 万元；本电站排名断面第3高，存在被调度进一步压减出力序位的风险。</li>
+      <li>变电设备可靠性风险：变电故障损失一年接近翻倍，若 2026年延续该趋势将突破 500 万kWh；长停事件（599h）指向主变/开关柜等关键设备老化或备件缺失，单次长停即可吞掉全年计划损失的 3–5 倍。</li>
+      <li>双细则下半年恶化趋势：6、9、11、12 月连续踩线（9.1/9.5/9.6/9.9 万元），12月已是两年内次高单月；若调节类问题不治理，2026年上半年考核将突破 8 万/月常态化，全年净影响可能重新回到 60 万元以上；一次调频试验若未按期完成，还将按月上网电量 1% 追加考核（2025 年口径约 43.09 万元）。</li>
+      <li>计划口径失真风险：连续两年完成率 71–73%，计划电量与实际可发电能力偏差约 28%，直接影响运维合同考核兑现与业主结算预期，需在 2026年计划下达前完成口径校准。</li>
+      <li>数据口径风险：主表「考核」列（2025年 81.0 万元）与双细则考核明细表（56.6 万元）存在口径差（主表含奖励冲抵前的全口径计提），对外汇报前必须统一并注明取数来源，避免同一个月出现两个考核数。</li>
+    </ul>
+  </div>
+
+  <!-- ===== 两年对标总表 ===== -->
+  <div class="sec-title">发电数据两年对标（2025年 vs 2024年）</div>
+  <table>
+    <thead><tr>
+      <th style="width:30%">指标</th><th style="width:20%">2024年</th><th style="width:20%">2025年</th><th style="width:30%">同比增减</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="l">发电量<span style="color:#66788c">（万kWh）</span></td><td>13,321</td><td>12,907</td><td class="up">-414.0（-3.1%）</td></tr>
+      <tr><td class="l">计划电量<span style="color:#66788c">（万kWh）</span></td><td>18,338</td><td>18,074</td><td class="up">-264.0（-1.4%）</td></tr>
+      <tr><td class="l">计划完成率<span style="color:#66788c">（%）</span></td><td>72.6%</td><td>71.4%</td><td class="up">-1.2 pp</td></tr>
+      <tr><td class="l">利用小时数<span style="color:#66788c">（h）</span></td><td>1,333</td><td>1,291</td><td class="up">-42.0（-3.2%）</td></tr>
+      <tr><td class="l">还原限电后小时数<span style="color:#66788c">（h）</span></td><td>1,457.3</td><td>1,499.1</td><td class="dn">+41.9（+2.9%）</td></tr>
+      <tr><td class="l">月均风速<span style="color:#66788c">（m/s）</span></td><td>5.28</td><td>5.35</td><td class="dn">+0.1（+1.3%）</td></tr>
+      <tr><td class="l">限电量<span style="color:#66788c">（万kWh）</span></td><td>1,242.6</td><td>2,081.4</td><td class="up">+838.8（+67.5%）</td></tr>
+      <tr><td class="l">限电率（加权）<span style="color:#66788c">（%）</span></td><td>8.5%</td><td>13.9%</td><td class="up">+5.4 pp</td></tr>
+      <tr><td class="l">计划损失电量<span style="color:#66788c">（万kWh）</span></td><td>108.5</td><td>106.6</td><td class="dn">-1.9（-1.8%）</td></tr>
+      <tr><td class="l">故障损失电量<span style="color:#66788c">（万kWh）</span></td><td>846.1</td><td>1,242.0</td><td class="up">+395.9（+46.8%）</td></tr>
+      <tr><td class="l">不可抗力损失<span style="color:#66788c">（万kWh）</span></td><td>109.7</td><td>179.1</td><td class="up">+69.4（+63.3%）</td></tr>
+      <tr><td class="l">损失电量合计<span style="color:#66788c">（万kWh）</span></td><td>1,064.3</td><td>1,527.7</td><td class="up">+463.4（+43.5%）</td></tr>
+      <tr><td class="l">故障停机时长<span style="color:#66788c">（h）</span></td><td>492</td><td>399</td><td class="dn">-93.0（-18.9%）</td></tr>
+      <tr><td class="l">电费收入<span style="color:#66788c">（万元）</span></td><td>4,592.4</td><td>4,573.5</td><td class="up">-18.9（-0.4%）</td></tr>
+      <tr><td class="l">平均电价<span style="color:#66788c">（元/kWh）</span></td><td>0.345</td><td>0.355</td><td class="dn">+0.0（+2.9%）</td></tr>
+      <tr><td class="l">双细则考核（主表口径）<span style="color:#66788c">（万元）</span></td><td>69.3</td><td>81.0</td><td class="up">+11.7（+16.9%）</td></tr>
+      <tr><td class="l">双细则奖励（主表口径）<span style="color:#66788c">（万元）</span></td><td>10.3</td><td>7.8</td><td class="up">-2.5（-24.3%）</td></tr>
+    </tbody>
+  </table>
+  <div class="callout blue">同比核心结论：2025年发电量同比 -3.1% 的主导变量是<b>限电大幅加重</b>（限电量 +67.5%、限电率 8.5%→13.9%），风资源本身并不差（月均风速 5.28→5.35 m/s 还略有回升）；共同的恶化项是<b>故障损失 +45.0%</b>（变电故障 198.8→391.0 万kWh 接近翻倍）与不可抗力 +63.3%；改善项是故障停机时长 492h→399h（-18.9%），说明单次故障处理效率在提升，但故障电量损失反而扩大，指向<b>大部件/长停事件权重上升</b>（2025年长停 599h、损失 1,798 万kWh）。</div>
+
+  <!-- ===== 分月明细 ===== -->
+  <div class="sec-title">发电数据分月明细 · 两年对标（2024-01 ~ 2025-12）</div>
+  <table>
+    <thead><tr>
+      <th>月份</th><th>风速(m/s)</th><th>计划(万kWh)</th><th>实际发电(万kWh)</th><th>完成率</th>
+      <th>利用小时(h)</th><th>限电率</th><th>限电量(万kWh)</th>
+      <th>计划损失</th><th>故障损失</th><th>不可抗力</th><th>损失合计</th>
+      <th>故障停机(h)</th><th>考核(万元)</th><th>奖励(万元)</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>2024-01</td><td>5.4</td><td>1,531</td><td>1,095</td><td>71.5%</td><td>110</td><td>2.1%</td><td>32.4</td><td>2.7</td><td>31.0</td><td>22.9</td><td>56.6</td><td>43</td><td>3.2</td><td>0.4</td></tr>
+      <tr><td>2024-02</td><td>5.1</td><td>1,502</td><td>1,030</td><td>68.6%</td><td>103</td><td class="hot">19.6%</td><td>35.0</td><td>8.1</td><td>81.0</td><td>18.7</td><td>107.8</td><td>14</td><td>7.7</td><td>0.4</td></tr>
+      <tr><td>2024-03</td><td>5.8</td><td>1,634</td><td>985</td><td>60.3%</td><td>98</td><td>2.1%</td><td>31.4</td><td>5.5</td><td>72.1</td><td>12.5</td><td>90.1</td><td>48</td><td>3.2</td><td>0.9</td></tr>
+      <tr><td>2024-04</td><td>5.1</td><td>1,576</td><td>1,282</td><td>81.3%</td><td>128</td><td>2.3%</td><td>258.5</td><td>15.5</td><td>21.7</td><td>8.2</td><td>45.4</td><td>52</td><td>3.3</td><td>1.0</td></tr>
+      <tr><td>2024-05</td><td>5.1</td><td>1,547</td><td>1,257</td><td>81.3%</td><td>126</td><td class="hot">18.1%</td><td>221.4</td><td>13.4</td><td>40.7</td><td>2.1</td><td>56.2</td><td>53</td><td class="hot">8.3</td><td>0.4</td></tr>
+      <tr><td>2024-06</td><td>4.9</td><td>1,488</td><td>1,195</td><td>80.3%</td><td>120</td><td class="hot">18.2%</td><td>25.4</td><td>2.5</td><td>51.8</td><td>3.4</td><td>57.7</td><td>54</td><td>3.6</td><td>1.0</td></tr>
+      <tr><td>2024-07</td><td>4.7</td><td>1,386</td><td>1,116</td><td>80.5%</td><td>112</td><td>1.9%</td><td>24.7</td><td>1.6</td><td>28.3</td><td>6.5</td><td>36.4</td><td>56</td><td class="hot">8.7</td><td>1.0</td></tr>
+      <tr><td>2024-08</td><td>5.3</td><td>1,488</td><td>1,138</td><td>76.5%</td><td>114</td><td class="hot">21.3%</td><td>263.3</td><td>1.6</td><td>112.1</td><td>8.3</td><td>122.0</td><td>14</td><td>3.9</td><td>0.5</td></tr>
+      <tr><td>2024-09</td><td>5.4</td><td>1,547</td><td>1,200</td><td>77.6%</td><td>120</td><td class="hot">18.3%</td><td>26.0</td><td>14.5</td><td>86.1</td><td>3.8</td><td>104.4</td><td>16</td><td class="hot">9.3</td><td>1.1</td></tr>
+      <tr><td>2024-10</td><td>5.1</td><td>1,473</td><td>1,026</td><td>69.7%</td><td>103</td><td>1.8%</td><td>25.1</td><td>22.8</td><td>135.6</td><td>10.8</td><td class="hot">169.2</td><td>64</td><td>3.8</td><td>1.2</td></tr>
+      <tr><td>2024-11</td><td>5.8</td><td>1,502</td><td>994</td><td>66.2%</td><td>99</td><td>1.8%</td><td>272.9</td><td>17.1</td><td>31.4</td><td>3.8</td><td>52.3</td><td>62</td><td>4.1</td><td>1.2</td></tr>
+      <tr><td>2024-12</td><td>5.7</td><td>1,664</td><td>1,003</td><td>60.3%</td><td>100</td><td>1.8%</td><td>26.5</td><td>3.2</td><td>154.3</td><td>8.7</td><td class="hot">166.2</td><td>16</td><td class="hot">10.2</td><td>1.2</td></tr>
+      <tr class="total"><td>2024小计</td><td>5.3(均)</td><td>18,338</td><td>13,321</td><td>72.6%</td><td>1,332</td><td>9.1%</td><td>1,242.6</td><td>108.5</td><td>846.1</td><td>109.7</td><td class="hot">1,064.3</td><td>492</td><td class="hot">69.3</td><td>10.3</td></tr>
+      <tr><td>2025-01</td><td>5.3</td><td>1,664</td><td>1,087</td><td>65.3%</td><td>109</td><td class="hot">17.5%</td><td>31.5</td><td>2.4</td><td>148.7</td><td>8.1</td><td class="hot">159.2</td><td>14</td><td>3.0</td><td>0.4</td></tr>
+      <tr><td>2025-02</td><td>6.1</td><td>1,502</td><td>1,327</td><td>88.3%</td><td>133</td><td class="hot">18.3%</td><td>242.4</td><td>11.7</td><td>146.7</td><td>29.8</td><td class="hot">188.2</td><td>14</td><td>3.2</td><td>0.4</td></tr>
+      <tr><td>2025-03</td><td>5.7</td><td>1,473</td><td>1,275</td><td>86.6%</td><td>128</td><td class="hot">19.6%</td><td>246.5</td><td>5.2</td><td>102.7</td><td>12.6</td><td>120.5</td><td>61</td><td>7.7</td><td>0.9</td></tr>
+      <tr><td>2025-04</td><td>5.5</td><td>1,444</td><td>1,207</td><td>83.6%</td><td>121</td><td>1.9%</td><td>26.3</td><td>19.5</td><td>21.4</td><td>1.6</td><td>42.5</td><td>67</td><td>8.0</td><td>0.4</td></tr>
+      <tr><td>2025-05</td><td>4.9</td><td>1,547</td><td>1,000</td><td>64.6%</td><td>100</td><td class="hot">17.3%</td><td>28.4</td><td>15.9</td><td>20.2</td><td>8.5</td><td>44.6</td><td>15</td><td>3.4</td><td>1.0</td></tr>
+      <tr><td>2025-06</td><td>5.2</td><td>1,488</td><td>1,053</td><td>70.8%</td><td>105</td><td class="hot">18.2%</td><td>214.9</td><td>11.3</td><td>77.3</td><td>15.0</td><td>103.6</td><td>17</td><td class="hot">9.1</td><td>0.4</td></tr>
+      <tr><td>2025-07</td><td>4.7</td><td>1,386</td><td>983</td><td>70.9%</td><td>98</td><td>2.2%</td><td>233.8</td><td>7.9</td><td>143.8</td><td>34.9</td><td class="hot">186.6</td><td>71</td><td>3.7</td><td>0.4</td></tr>
+      <tr><td>2025-08</td><td>4.8</td><td>1,488</td><td>928</td><td>62.4%</td><td>93</td><td>2.0%</td><td>264.6</td><td>2.3</td><td>184.2</td><td>39.7</td><td class="hot">226.2</td><td>14</td><td>3.9</td><td>0.5</td></tr>
+      <tr><td>2025-09</td><td>5.3</td><td>1,444</td><td>964</td><td>66.8%</td><td>96</td><td>2.1%</td><td>224.3</td><td>4.3</td><td>77.6</td><td>4.6</td><td>86.5</td><td>82</td><td class="hot">9.5</td><td>0.5</td></tr>
+      <tr><td>2025-10</td><td>5.2</td><td>1,473</td><td>1,009</td><td>68.5%</td><td>101</td><td>1.8%</td><td>24.0</td><td>4.7</td><td>208.6</td><td>13.0</td><td class="hot">226.3</td><td>14</td><td class="hot">10.0</td><td>0.5</td></tr>
+      <tr><td>2025-11</td><td>5.8</td><td>1,634</td><td>1,022</td><td>62.5%</td><td>102</td><td class="hot">20.1%</td><td>265.9</td><td>4.3</td><td>27.4</td><td>3.6</td><td>35.3</td><td>14</td><td class="hot">9.6</td><td>1.2</td></tr>
+      <tr><td>2025-12</td><td>5.7</td><td>1,531</td><td>1,052</td><td>68.7%</td><td>105</td><td class="hot">21.0%</td><td>278.8</td><td>17.1</td><td>83.4</td><td>7.7</td><td>108.2</td><td>16</td><td class="hot">9.9</td><td>1.2</td></tr>
+      <tr class="total"><td>2025小计</td><td>5.4(均)</td><td>18,074</td><td>12,907</td><td>71.4%</td><td>1,291</td><td class="hot">11.8%</td><td>2,081.4</td><td>106.6</td><td>1,242.0</td><td>179.1</td><td class="hot">1,527.7</td><td>399</td><td class="hot">81.0</td><td>7.8</td></tr>
+      <tr class="total"><td>24个月汇总</td><td>5.3(均)</td><td>36,412</td><td>26,228</td><td>72.0%</td><td>2,623</td><td class="hot">10.5%</td><td>3,324.0</td><td>215.1</td><td>2,088.1</td><td>288.8</td><td class="hot">2,592.0</td><td>891</td><td class="hot">150.3</td><td>18.1</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ===== 限电对标（断面7站 · 两年） ===== -->
+  <div class="sec-title">限电周边场站对标情况（断面7站 · 2024–2025两年）</div>
+  <table>
+    <thead><tr>
+      <th>场站</th><th>2024月均限电率</th><th>2025月均限电率</th><th>同比变化</th><th>单月峰值(24月)</th><th>月均等效小时(h)</th><th>2025相对本电站</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="l">F场站</td><td>6.0%</td><td class="hot">14.9%</td><td>+8.9 pp</td><td>22.0%</td><td>109</td><td>+3.1 pp</td></tr>
+      <tr><td class="l">C场站</td><td>9.2%</td><td class="hot">12.2%</td><td>+3.0 pp</td><td>22.5%</td><td>111</td><td>+0.4 pp</td></tr>
+      <tr class="ours"><td class="l">本电站<span class="tag">本电站</span></td><td>9.1%</td><td>11.8%</td><td>+2.7 pp</td><td>21.3%</td><td>109</td><td>—</td></tr>
+      <tr><td class="l">B场站</td><td>9.0%</td><td>11.1%</td><td>+2.1 pp</td><td>21.8%</td><td>109</td><td>-0.7 pp</td></tr>
+      <tr><td class="l">D场站</td><td>9.8%</td><td>10.4%</td><td>+0.7 pp</td><td>21.0%</td><td>108</td><td>-1.4 pp</td></tr>
+      <tr><td class="l">A场站</td><td>9.6%</td><td>9.7%</td><td>+0.1 pp</td><td>20.2%</td><td>114</td><td>-2.1 pp</td></tr>
+      <tr><td class="l">E场站</td><td>11.2%</td><td>8.5%</td><td>-2.8 pp</td><td>22.6%</td><td>107</td><td>-3.4 pp</td></tr>
+      <tr class="total"><td>断面均值</td><td>9.1%</td><td>11.2%</td><td>+2.1 pp</td><td>—</td><td>109</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">对标结论：2025年本电站月均限电率 11.8%，在断面7站中列第3高，高于断面均值（11.2%）0.6 个百分点；同比 2024年（9.1%）上升 2.7 个百分点，为断面内第3大升幅（次于F场站 +8.9pp、C场站 +3.0pp）。断面内 2025年多数场站限电率同步抬升（B +2.1pp、C +3.0pp、D +0.6pp），仅 E 场站下降（11.2%→8.5%），提示限电加重主要是<b>送出断面整体约束收紧</b>，非单站运行问题；限电高峰集中在 2月、8月、11–12月，与断面负荷低谷期重合。</div>
+
+  <!-- ===== 双细则分月明细（2025） ===== -->
+  <div class="sec-title">双细则考核分月明细（2025年 · 全省排名）</div>
+  <table>
+    <thead><tr><th>月份</th><th>考核(万元)</th><th>奖励(万元)</th><th>净影响(万元)</th><th>全省排名</th><th>主要考核原因</th></tr></thead>
+    <tbody>
+      <tr><td>2025-01</td><td class="good">0.0</td><td>0.4</td><td>6.2</td><td>37/48</td><td class="l">无考核</td></tr>
+      <tr><td>2025-02</td><td>3.2</td><td>0.4</td><td>2.2</td><td>38/48</td><td class="l">AGC响应不合格</td></tr>
+      <tr><td>2025-03</td><td>7.7</td><td>0.9</td><td>2.1</td><td>47/62</td><td class="l">一次调频未动作</td></tr>
+      <tr><td>2025-04</td><td class="good">0.0</td><td>0.4</td><td>6.3</td><td>48/62</td><td class="l">无考核</td></tr>
+      <tr><td>2025-05</td><td class="good">0.0</td><td>1.0</td><td>6.4</td><td>41/48</td><td class="l">无考核</td></tr>
+      <tr><td>2025-06</td><td class="hot">9.1</td><td>0.4</td><td>2.4</td><td>50/62</td><td class="l">AGC响应不合格、AVC响应不合格</td></tr>
+      <tr><td>2025-07</td><td>3.7</td><td>0.4</td><td>7.4</td><td>37/48</td><td class="l">有功控制响应延迟、AVC响应不合格</td></tr>
+      <tr><td>2025-08</td><td>3.9</td><td>0.5</td><td>7.6</td><td>38/48</td><td class="l">短期功率预测偏差、超短期功率预测偏差</td></tr>
+      <tr><td>2025-09</td><td class="hot">9.5</td><td>0.5</td><td>2.8</td><td>46/62</td><td class="l">短期功率预测偏差、一次调频未动作、有功控制响应延迟</td></tr>
+      <tr><td>2025-10</td><td class="good">0.0</td><td>0.5</td><td>2.7</td><td>47/62</td><td class="l">无考核</td></tr>
+      <tr><td>2025-11</td><td class="hot">9.6</td><td>1.2</td><td>3.0</td><td>48/62</td><td class="l">有功控制响应延迟</td></tr>
+      <tr><td>2025-12</td><td class="hot">9.9</td><td>1.2</td><td>3.2</td><td>49/62</td><td class="l">AVC响应不合格、超短期功率预测偏差、AGC响应不合格</td></tr>
+      <tr class="total"><td>2025合计</td><td>56.6</td><td>7.8</td><td>52.3</td><td colspan="2"></td></tr>
+    </tbody>
+  </table>
+  <div class="callout">双细则结论：2025年考核合计 56.6 万元（2024年 57.1 万元，同比 -0.9%），奖励 7.8 万元、净影响 52.3 万元（主表口径，2024年 62.8 万元）。4 个月考核超 8 万元预警线，最大失血点为 2025年12月（9.9 万元，AVC响应不合格+超短期功率预测偏差+AGC响应不合格）；4 个月零考核。原因结构中调节类（有功控制响应延迟+AGC+AVC+一次调频）合计 46.2 万元占 81.7%，较2024年的预测类主导发生结构性切换，建议优先治理 AGC/AVC 调节品质与有功控制响应速度。</div>
+
+  <div class="foot">
+    <b>数据说明：</b>数据为 100MW 风电场 2024–2025 年 24 个月经营数据（培训演示用融合数据）；报告 KPI 为 2025 年单年口径，明细表为 2024 vs 2025 两年对标；设备可用率取 98.7%。后续工作建议可落实进 2026 年经营管理工作计划中。
+    完成率 = 实际发电 ÷ 计划电量；限电率 = 限电量 ÷（发电量+限电量）；故障损失 = 变电故障 + 发电故障；还原限电后小时 = 利用小时 + 限电量 ÷ 10；同比增减红色为恶化、绿色为改善。
+  </div>
+
+</div>
+</body>
+</html>

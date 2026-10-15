@@ -1,0 +1,7 @@
+comp=C03 rate=30 dur=6.8 layers=13
+fps OK
+duration OK
+workArea OK
+outPoints OK
+motionBlur OK
+save OK

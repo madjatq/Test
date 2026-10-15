@@ -1,0 +1,2 @@
+Rendering C03-C10_MG_1080p30_成片 1920x1080 68.3s 30fps | H.264 - 匹配渲染设置 - 15 Mbps
+FINISHED status=3019 elapsed=68

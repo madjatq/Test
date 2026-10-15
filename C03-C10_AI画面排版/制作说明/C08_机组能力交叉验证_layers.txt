@@ -1,0 +1,19 @@
+C08_机组能力交叉验证 | 1920x1080 | RGB | Embedded assets
+99_SOURCE_REFERENCE__隐藏参考 | visible=false | items=1
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+40_COMPARISON_LEGEND | visible=true | items=4
+32_CP_CURVES | visible=true | items=1
+31_CP_AXES | visible=true | items=1
+30_CP_CARD | visible=true | items=3
+23_POWER_REVEAL_CURSOR | visible=true | items=1
+22_POWER_CURVES | visible=true | items=1
+21_POWER_AXES | visible=true | items=1
+20_POWER_CARD | visible=true | items=3
+10_MAIN_PANEL | visible=true | items=2
+06_TOKEN_A03 | visible=true | items=2
+05_TOKEN_A02 | visible=true | items=2
+04_TOKEN_A01 | visible=true | items=2
+02_HEADLINE | visible=true | items=3
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

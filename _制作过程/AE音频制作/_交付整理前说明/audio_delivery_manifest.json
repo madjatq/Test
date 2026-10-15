@@ -1,0 +1,61 @@
+{
+  "bpm": 116,
+  "bars": 33,
+  "meter": "4/4",
+  "duration_seconds": 68.27585416666666,
+  "ae_comp_duration": 68.3,
+  "reference_edit": {
+    "source_file": "D:\\AI\\作业\\1014\\MCP操作\\介绍一位新伙伴——豆包工作1.mp4",
+    "source_start_seconds": 124.87806546029353,
+    "source_end_seconds": 193.21283681490956,
+    "source_local_bpm": 115.9,
+    "playback_tempo_factor": 1.0008628127696289,
+    "final_cadence_output_seconds": 66.20689655172414,
+    "method": "Continuous tail excerpt; final cadence anchored to bar 33; 18 ms fade-in, 650 ms fade-out. No source splice.",
+    "listening_limit": "Tool environment does not support audio input. Signal analysis and VAD only; human listening has not been performed."
+  },
+  "outputs": [
+    {
+      "file": "ORIGINAL_LightTech_116BPM_68s.wav",
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "sample_frames": 3277241,
+      "duration_seconds": 68.27585416666666,
+      "sample_peak": 0.8548886775970459,
+      "rms": 0.1440979689359665,
+      "integrated_lufs": -16.06,
+      "true_peak_dbtp": -1.36,
+      "loudness_range_lu": 2.9,
+      "first_sample": [
+        2.2649765014648438e-06,
+        2.2649765014648438e-06
+      ],
+      "last_sample": [
+        -1.1920928955078125e-07,
+        0.0
+      ]
+    },
+    {
+      "file": "REFERENCE_116BPM_68s.wav",
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "sample_frames": 3277241,
+      "duration_seconds": 68.27585416666666,
+      "sample_peak": 0.49831056594848633,
+      "rms": 0.1303415298461914,
+      "integrated_lufs": -16.01,
+      "true_peak_dbtp": -5.63,
+      "loudness_range_lu": 2.0,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        -1.1920928955078125e-07,
+        1.1920928955078125e-07
+      ]
+    }
+  ]
+}

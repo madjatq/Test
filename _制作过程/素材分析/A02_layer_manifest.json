@@ -1,0 +1,24 @@
+[
+  {
+    "stem": "A02_power_curve",
+    "size": [
+      1490,
+      700
+    ],
+    "curves_pixels": 15467,
+    "axes_file": "A02_power_curve_axes.png",
+    "curves_file": "A02_power_curve_curves.png",
+    "threshold": "HSV saturation >=51/255 and channel range >=30, limited to inner plot; axes neutral grayscale; white removed to alpha"
+  },
+  {
+    "stem": "A02_Cp_curve",
+    "size": [
+      1476,
+      700
+    ],
+    "curves_pixels": 18065,
+    "axes_file": "A02_Cp_curve_axes.png",
+    "curves_file": "A02_Cp_curve_curves.png",
+    "threshold": "HSV saturation >=51/255 and channel range >=30, limited to inner plot; axes neutral grayscale; white removed to alpha"
+  }
+]

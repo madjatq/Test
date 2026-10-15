@@ -1,0 +1,10 @@
+C03 | layers=14 | transform_keys=38 | errors=
+C04 | layers=19 | transform_keys=26 | errors=
+C05 | layers=14 | transform_keys=52 | errors=
+C06 | layers=18 | transform_keys=58 | errors=
+C07 | layers=15 | transform_keys=44 | errors=
+C08 | layers=19 | transform_keys=33 | errors=
+C09 | layers=17 | transform_keys=29 | errors=
+C10 | layers=20 | transform_keys=46 | errors=
+C03-C10_MG_1080p30_成片 | layers=11 | transform_keys=14 | errors=
+STILLS EXPORTED

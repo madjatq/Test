@@ -1,0 +1,14 @@
+C05_资料调用与判断基准 | 1920x1080 | RGB | Embedded assets
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+21_DATA_STATUS | visible=true | items=2
+20_DIALOGUE_PANEL | visible=true | items=6
+18_DATA_CONNECTORS | visible=true | items=4
+14_RULE_CARD | visible=true | items=6
+13_CURTAIL_CARD | visible=true | items=13
+12_FAULT_CARD | visible=true | items=7
+11_RESOURCE_CARD | visible=true | items=5
+10_FLOW_FRAME | visible=true | items=1
+02_HEADLINE | visible=true | items=3
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

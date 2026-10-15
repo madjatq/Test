@@ -1,0 +1,15 @@
+C07_读取可研基准 | 1920x1080 | RGB | Embedded assets
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+31_HIGHLIGHT_LINK | visible=true | items=3
+30_FINDINGS | visible=true | items=15
+22_REPORT_SCAN | visible=true | items=1
+21_REPORT_HIGHLIGHT | visible=true | items=1
+20_REPORT_PAGE | visible=true | items=8
+10_MAIN_PANEL | visible=true | items=2
+06_TOKEN_A03 | visible=true | items=2
+05_TOKEN_A02 | visible=true | items=2
+04_TOKEN_A01 | visible=true | items=2
+02_HEADLINE | visible=true | items=3
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

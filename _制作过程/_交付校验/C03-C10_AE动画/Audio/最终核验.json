@@ -1,0 +1,226 @@
+{
+  "verified_at": "2026-10-14T22:52:29.877474+08:00",
+  "scope": "Read-only independent audit; delivered WAV/MP3 and existing beatmaps unchanged",
+  "listening": {
+    "performed": false,
+    "reason": "No audio-input or listening tool is available in this task. Signal analysis and source-code audit do not establish subjective timbre/style similarity."
+  },
+  "wav": {
+    "sample_rate": 48000,
+    "frames": 3277241,
+    "channels": 2,
+    "duration_seconds": 68.27585416666666,
+    "finite": true,
+    "clipped_samples": 0,
+    "sample_peak": 0.8548886775970459,
+    "sample_peak_dbfs": -1.3618086961499642,
+    "rms": 0.14409797141010444,
+    "first_sample": [
+      2.2649765014648438e-06,
+      2.2649765014648438e-06
+    ],
+    "last_sample": [
+      -1.1920928955078125e-07,
+      0.0
+    ],
+    "integrated_lufs": -16.06,
+    "true_peak_dbtp": -1.36,
+    "loudness_range_lu": 2.9,
+    "file_sha256": "b3e27424f3ad3079830e220a87e97b5c603653551e769312e9b657d7e8e7cff7",
+    "format": "pcm_s24le",
+    "bit_depth": 24
+  },
+  "fadeout": [
+    {
+      "start": 60,
+      "end": 65,
+      "rms": 0.14195120961776048,
+      "rms_dbfs": -16.957218046830064,
+      "peak": 0.830389142036438
+    },
+    {
+      "start": 66,
+      "end": 67,
+      "rms": 0.1035921052720921,
+      "rms_dbfs": -19.69346681602633,
+      "peak": 0.6855627298355103
+    },
+    {
+      "start": 67,
+      "end": 68,
+      "rms": 0.03953839273115211,
+      "rms_dbfs": -28.05961978197404,
+      "peak": 0.16417193412780762
+    },
+    {
+      "start": 68,
+      "end": 68.27585416666666,
+      "rms": 0.007614725499894022,
+      "rms_dbfs": -42.366914954976444,
+      "peak": 0.0423130989074707
+    },
+    {
+      "start": 68.22585416666666,
+      "end": 68.27585416666666,
+      "rms": 0.00011689856232405718,
+      "rms_dbfs": -78.64381659944381,
+      "peak": 0.0006361007690429688
+    }
+  ],
+  "provenance": {
+    "method": "Reviewed synthesis AST and regenerated deterministic mix entirely in memory before its first file-write statement; compared all samples with archived premaster; rerendered mastering in temporary directory.",
+    "source_audio_reads_in_synthesis": false,
+    "synth_seed": 10142026,
+    "sources": [
+      "Mathematical oscillators (sine/FM/harmonics)",
+      "Deterministic random noise",
+      "Code-defined notes, harmony, rhythms and envelopes"
+    ],
+    "tracks": [
+      "electronic drums",
+      "synth bass",
+      "FM pluck keys",
+      "sine-based lead melody",
+      "stereo pad",
+      "noise sweeps/chimes"
+    ],
+    "recreated_premaster_max_abs_error": 1.1896429441549117e-07,
+    "pcm24_lsb": 1.1920928955078125e-07,
+    "premaster_matches_within_pcm24_lsb": true,
+    "separate_reference_edits": "Reference-derived REFERENCE_* files exist under _制作过程/AE音频制作/_reference_process and are not the selected delivered track.",
+    "global_musical_originality_limit": "This verifies no reference audio was sampled in the delivered render; it is not a worldwide melody similarity/copyright search.",
+    "mastering_reproduction_sample_exact": true,
+    "mastering_reproduction_max_abs_error": 0.0,
+    "mastering_reproduction_file_hash_exact": true
+  },
+  "mp3": {
+    "decodes_cleanly": true,
+    "sample_rate": 48000,
+    "decoded_frames": 3277241,
+    "decoded_duration_seconds": 68.27585416666666,
+    "file_sha256": "8d1b0fded754a9f46f1aea7aafdd1b3dfdd3dfa765faa93b54211e209d823424",
+    "correlation_with_master": 0.9988596745900868
+  },
+  "reference": {
+    "source": "D:\\AI\\作业\\1014\\MCP操作\\介绍一位新伙伴——豆包工作1.mp4",
+    "decoded_duration_seconds": 195.73333333333332,
+    "fresh_tempo": {
+      "bpm": 115.92399999999552,
+      "search_step_bpm": 0.002,
+      "method": "High-band spectral-flux periodicity, harmonic Fourier search 114–118 BPM",
+      "channel": "stereo side"
+    },
+    "archived_refined_bpm": 115.91399999999554,
+    "style_conclusion": "Only regular rhythmic pulse near 116 BPM is objectively confirmed. The delivered arrangement is code-defined light electronic instrumental; subjective match to the reference is unverified."
+  },
+  "tempo_and_structure": {
+    "declared_bpm": 116,
+    "measured_bpm": {
+      "bpm": 115.99999999999534,
+      "search_step_bpm": 0.002,
+      "method": "High-band spectral-flux periodicity, harmonic Fourier search 114–118 BPM",
+      "channel": "stereo mid"
+    },
+    "meter": "4/4",
+    "bars": 33,
+    "beats": 132,
+    "beat_seconds": 0.5172413793103449,
+    "bar_seconds": 2.0689655172413794,
+    "mathematical_duration_seconds": 68.27586206896552,
+    "duration_quantization_error_seconds": -7.902298861495183e-06,
+    "beatmap_marker_count": 132,
+    "beatmap_max_time_error_seconds": 4.827640509574849e-10,
+    "scene_bars": [
+      3,
+      4,
+      4,
+      7,
+      3,
+      4,
+      3,
+      5
+    ],
+    "scenes": [
+      {
+        "name": "C03",
+        "bars": 3,
+        "start": 0.0,
+        "end": 6.206896551724139,
+        "ae_start_frame_30fps": 0,
+        "ae_end_frame_30fps": 186
+      },
+      {
+        "name": "C04",
+        "bars": 4,
+        "start": 6.206896551724139,
+        "end": 14.482758620689657,
+        "ae_start_frame_30fps": 186,
+        "ae_end_frame_30fps": 434
+      },
+      {
+        "name": "C05",
+        "bars": 4,
+        "start": 14.482758620689657,
+        "end": 22.758620689655174,
+        "ae_start_frame_30fps": 434,
+        "ae_end_frame_30fps": 683
+      },
+      {
+        "name": "C06",
+        "bars": 7,
+        "start": 22.758620689655174,
+        "end": 37.24137931034483,
+        "ae_start_frame_30fps": 683,
+        "ae_end_frame_30fps": 1117
+      },
+      {
+        "name": "C07",
+        "bars": 3,
+        "start": 37.24137931034483,
+        "end": 43.44827586206897,
+        "ae_start_frame_30fps": 1117,
+        "ae_end_frame_30fps": 1303
+      },
+      {
+        "name": "C08",
+        "bars": 4,
+        "start": 43.44827586206897,
+        "end": 51.724137931034484,
+        "ae_start_frame_30fps": 1303,
+        "ae_end_frame_30fps": 1552
+      },
+      {
+        "name": "C09",
+        "bars": 3,
+        "start": 51.724137931034484,
+        "end": 57.931034482758626,
+        "ae_start_frame_30fps": 1552,
+        "ae_end_frame_30fps": 1738
+      },
+      {
+        "name": "C10",
+        "bars": 5,
+        "start": 57.931034482758626,
+        "end": 68.27586206896552,
+        "ae_start_frame_30fps": 1738,
+        "ae_end_frame_30fps": 2048
+      }
+    ],
+    "harmony": "Dmaj9 / Bm7 / Gmaj9 / A(sus), final D6/9 cadence",
+    "arrangement": "Eight scene-specific melody variants; lighter keys/percussion in C06; transition noise sweeps/chimes; final cadence begins at bar 33 (66.206897 s); explicit 230 ms fadeout plus natural note decay.",
+    "ae_duration_seconds": 68.3,
+    "ae_frames_30fps": 2049
+  },
+  "original_files_unchanged": true,
+  "evidence_sha256": {
+    "C03-C10_AE动画\\Audio\\ORIGINAL_LightTech_116BPM_68s.wav": "b3e27424f3ad3079830e220a87e97b5c603653551e769312e9b657d7e8e7cff7",
+    "C03-C10_AE动画\\Audio\\ORIGINAL_LightTech_116BPM_68s.mp3": "8d1b0fded754a9f46f1aea7aafdd1b3dfdd3dfa765faa93b54211e209d823424",
+    "_制作过程\\AE音频制作\\ORIGINAL_LightTech_116BPM_33bars_premaster.wav": "21073c81104b47f6e4fc084a5606dd4647ae6a97a4fefcaa3e763fcd71e217f9",
+    "_制作过程\\AE音频制作\\compose_original.py": "5502c3c63459bc77b61cbdc2aac677d8c3c45b2a80555a6c3a2950366c93c975",
+    "_制作过程\\AE音频制作\\finalize_music.py": "cbaba55bd5db75503fb0d0bd7b05355f01eadb3f3615573c35e2f4cd2307fcd7"
+  },
+  "deliverability": {
+    "technical_pass": true,
+    "conclusion": "Technically suitable for AE use at time 0, with 68.3 s / 2049-frame 30fps composition; subjective listening approval is not recorded."
+  }
+}

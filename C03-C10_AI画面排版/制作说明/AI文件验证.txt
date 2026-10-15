@@ -1,0 +1,8 @@
+C03_一个场站一个AI项目经理.ai | artboards=1 | 1920x1080 | layers=13 | links=0 | raster=1 | text=34 | outOfBounds=
+C04_提交经营分析需求.ai | artboards=1 | 1920x1080 | layers=15 | links=0 | raster=1 | text=32 | outOfBounds=
+C05_资料调用与判断基准.ai | artboards=1 | 1920x1080 | layers=13 | links=0 | raster=3 | text=30 | outOfBounds=
+C06_行业数据与经营经验.ai | artboards=1 | 1920x1080 | layers=11 | links=0 | raster=2 | text=17 | outOfBounds=
+C07_读取可研基准.ai | artboards=1 | 1920x1080 | layers=14 | links=0 | raster=1 | text=27 | outOfBounds=
+C08_机组能力交叉验证.ai | artboards=1 | 1920x1080 | layers=18 | links=0 | raster=5 | text=18 | outOfBounds=
+C09_接入资源修正目标.ai | artboards=1 | 1920x1080 | layers=16 | links=0 | raster=4 | text=22 | outOfBounds=
+C10_合理区间与提升空间.ai | artboards=1 | 1920x1080 | layers=18 | links=0 | raster=1 | text=22 | outOfBounds=

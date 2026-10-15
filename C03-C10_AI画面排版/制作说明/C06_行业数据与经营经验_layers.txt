@@ -1,0 +1,12 @@
+C06_行业数据与经营经验 | 1920x1080 | RGB | Embedded assets
+98_FULL_SCRIPT_TEXT__隐藏参考 | visible=false | items=1
+90_CAPTION | visible=true | items=1
+60_FOUNDATION_STRIP | visible=true | items=1
+33_EVIDENCE_4 | visible=true | items=9
+32_EVIDENCE_3 | visible=true | items=11
+31_EVIDENCE_2 | visible=true | items=6
+30_EVIDENCE_1 | visible=true | items=11
+20_CORE_TITLE | visible=true | items=3
+10_BACKGROUND_FLOW | visible=true | items=4
+01_BRAND | visible=true | items=5
+00_BG | visible=true | items=1

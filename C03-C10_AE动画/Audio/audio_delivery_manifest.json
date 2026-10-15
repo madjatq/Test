@@ -1,0 +1,43 @@
+﻿{
+    "selected_music":  "original",
+    "bpm":  116,
+    "bars":  33,
+    "meter":  "4/4",
+    "duration_seconds":  68.27585416666666,
+    "ae_comp_duration":  68.3,
+    "master_file":  "ORIGINAL_LightTech_116BPM_68s.wav",
+    "preview_file":  "ORIGINAL_LightTech_116BPM_68s.mp3",
+    "beatmap_files":  [
+                          "C03-C10_music_beatmap.json",
+                          "C03-C10_music_beats.csv"
+                      ],
+    "verification_report":  "ORIGINAL_verification.json",
+    "outputs":  [
+                    {
+                        "file":  "ORIGINAL_LightTech_116BPM_68s.wav",
+                        "sample_rate":  48000,
+                        "channels":  2,
+                        "bit_depth":  24,
+                        "sample_frames":  3277241,
+                        "duration_seconds":  68.27585416666666,
+                        "sample_peak":  0.8548886775970459,
+                        "rms":  0.1440979689359665,
+                        "integrated_lufs":  -16.06,
+                        "true_peak_dbtp":  -1.36,
+                        "loudness_range_lu":  2.9,
+                        "first_sample":  [
+                                             2.2649765014648438E-06,
+                                             2.2649765014648438E-06
+                                         ],
+                        "last_sample":  [
+                                            -1.1920928955078125E-07,
+                                            0.0
+                                        ]
+                    }
+                ],
+    "validation":  {
+                       "format_check":  "ffprobe rechecked 2026-10-14: pcm_s24le, 48000 Hz, stereo, 24-bit, 68.275854 s",
+                       "loudness_check":  "Existing ffmpeg loudnorm report retained; not rerun during delivery cleanup",
+                       "listening_status":  "No human listening verification recorded"
+                   }
+}

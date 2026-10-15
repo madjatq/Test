@@ -1,0 +1,108 @@
+{
+  "sample_rate": 48000,
+  "sample_frames": 3277241,
+  "channels": 2,
+  "duration": 68.27585416666666,
+  "finite": true,
+  "no_clipping": true,
+  "peak": 0.8548886775970459,
+  "tail_decay": [
+    {
+      "start": 0,
+      "end": 1,
+      "rms": 0.1379610785514301,
+      "peak": 0.8237972259521484
+    },
+    {
+      "start": 60,
+      "end": 65,
+      "rms": 0.14195120961776048,
+      "peak": 0.830389142036438
+    },
+    {
+      "start": 66,
+      "end": 67,
+      "rms": 0.1035921052720921,
+      "peak": 0.6855627298355103
+    },
+    {
+      "start": 67,
+      "end": 68,
+      "rms": 0.03953839273115211,
+      "peak": 0.16417193412780762
+    },
+    {
+      "start": 68,
+      "end": 68.27585416666666,
+      "rms": 0.007614725499894022,
+      "peak": 0.0423130989074707
+    }
+  ],
+  "scenes": [
+    {
+      "name": "C03",
+      "bars": 3,
+      "start": 0.0,
+      "end": 6.206896551724139,
+      "ae_start_frame_30fps": 0,
+      "ae_end_frame_30fps": 186
+    },
+    {
+      "name": "C04",
+      "bars": 4,
+      "start": 6.206896551724139,
+      "end": 14.482758620689657,
+      "ae_start_frame_30fps": 186,
+      "ae_end_frame_30fps": 434
+    },
+    {
+      "name": "C05",
+      "bars": 4,
+      "start": 14.482758620689657,
+      "end": 22.758620689655174,
+      "ae_start_frame_30fps": 434,
+      "ae_end_frame_30fps": 683
+    },
+    {
+      "name": "C06",
+      "bars": 7,
+      "start": 22.758620689655174,
+      "end": 37.24137931034483,
+      "ae_start_frame_30fps": 683,
+      "ae_end_frame_30fps": 1117
+    },
+    {
+      "name": "C07",
+      "bars": 3,
+      "start": 37.24137931034483,
+      "end": 43.44827586206897,
+      "ae_start_frame_30fps": 1117,
+      "ae_end_frame_30fps": 1303
+    },
+    {
+      "name": "C08",
+      "bars": 4,
+      "start": 43.44827586206897,
+      "end": 51.724137931034484,
+      "ae_start_frame_30fps": 1303,
+      "ae_end_frame_30fps": 1552
+    },
+    {
+      "name": "C09",
+      "bars": 3,
+      "start": 51.724137931034484,
+      "end": 57.931034482758626,
+      "ae_start_frame_30fps": 1552,
+      "ae_end_frame_30fps": 1738
+    },
+    {
+      "name": "C10",
+      "bars": 5,
+      "start": 57.931034482758626,
+      "end": 68.27586206896552,
+      "ae_start_frame_30fps": 1738,
+      "ae_end_frame_30fps": 2048
+    }
+  ],
+  "beat_count": 132
+}

@@ -1,0 +1,19 @@
+items=17
+1 | C03-C10 MG | 文件夹 | other
+2 | C03 | 合成 | COMP
+3 | C03_一个场站一个AI项目经理 个图层 | 文件夹 | other
+4 | 00_BG/C03_一个场站一个AI项目经理.ai | 素材 | other
+5 | 01_BRAND/C03_一个场站一个AI项目经理.ai | 素材 | other
+6 | 02_HEADLINE/C03_一个场站一个AI项目经理.ai | 素材 | other
+7 | 10_UI_PANEL/C03_一个场站一个AI项目经理.ai | 素材 | other
+8 | 11_STATION_HEADER/C03_一个场站一个AI项目经理.ai | 素材 | other
+9 | 12_OVERVIEW_CARDS/C03_一个场站一个AI项目经理.ai | 素材 | other
+10 | 20_AI_WELCOME/C03_一个场站一个AI项目经理.ai | 素材 | other
+11 | 21_QUICK_ACTIONS/C03_一个场站一个AI项目经理.ai | 素材 | other
+12 | 25_INPUT_BOX/C03_一个场站一个AI项目经理.ai | 素材 | other
+13 | 26_SEND_BUTTON/C03_一个场站一个AI项目经理.ai | 素材 | other
+14 | 90_CAPTION/C03_一个场站一个AI项目经理.ai | 素材 | other
+15 | 98_FULL_SCRIPT_TEXT__隐藏参考/C03_一个场站一个AI项目经理.ai | 素材 | other
+16 | 99_SOURCE_REFERENCE__隐藏参考/C03_一个场站一个AI项目经理.ai | 素材 | other
+17 | Sources | 文件夹 | other
+COMP_CROPPED=3812 type=number
